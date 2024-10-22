@@ -578,7 +578,7 @@ hr {
   color: #353535; 
 }
 
-/* === Featured Recipe Section === */
+/* === Archive Recipe Post=== */
 .featured-recipe {
   padding: 3rem 5%;
   display: flex;
@@ -734,7 +734,7 @@ hr {
 
 .read-more {
   text-decoration: none;
-  color: #973131; /* Example link color */
+  color: #973131; 
   font-weight: bold;
 }
 
@@ -754,37 +754,296 @@ hr {
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the pagination */
+  justify-content: center; 
   padding: 1rem;
 }
 
 .pagination-arrow {
-  background-color: #dcdcdc; /* Grey square for arrows */
-  color: #000;
-  width: 40px; /* Width of the arrow square */
-  height: 40px; /* Height of the arrow square */
+  background-color: #dcdcdc;
+  color: #ffffff;
+  width: 35px; 
+  height: 35px; 
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 0 5px; /* Spacing between the arrows and numbers */
+  margin: 0 5px;
 }
+
+
 
 .pagination-numbers {
   display: flex;
-  align-items: flex-start; /* Align numbers to the top left */
+  align-items: flex-start;
 }
 
 .number-box {
-  background-color: #ffffff; /* White square for numbers */
+  background-color: #ffffff;
   color: #000;
-  width: 30px; /* Width of the number box */
-  height: 30px; /* Height of the number box */
+  width: 35px; 
+  height: 35px; 
   display: flex;
-  justify-content: flex-start; /* Align text to the upper left */
-  align-items: flex-start; /* Align text to the upper left */
-  margin: 0 2px; /* Spacing between number boxes */
-  font-size: 0.8rem; /* Smaller font size */
-  border: 1px solid #ccc; /* Optional: border for the number box */
-  border-radius: 4px; /* Optional: rounded corners for the number box */
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  margin: 0 2px; 
+  font-size: 0.7rem; 
+  font-weight: 400;
+  padding-left: 0.2rem;
+  border: 0.5px solid #ccc; 
+}
+
+/* Single */
+
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+.content-wrapper-single {
+  max-width: 65%;
+  padding: 0rem 5%;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  color: #973131;
+  margin-bottom: 0.5rem;
+}
+
+/* Rating Styles */
+.rating {
+  font-size: 1.2rem;
+  color: #727272;
+  margin-bottom: 1rem;
+}
+
+.blog-description {
+  font-size: 1rem;
+  color: #000000;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.jump-to-howto {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  margin: 1.5rem 0;
+  margin-bottom: 0;
+}
+
+.jump-to-howto .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #973131;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.jump-to-howto p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Blog Description */
+
+.how-to-wrapper {
+  max-width: 65%; 
+  padding: 0.5rem 5%; 
+  background-color: #fff; 
+  
+}
+
+.video-placeholder-single img {
+  width: 100%;
+  height: auto;
+}
+
+.video-placeholder-single p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.image-container-single {
+  width: 100%;
+  height: 500px; 
+  overflow: hidden;
+}
+
+.image-container-single.small-image-container {
+  width: 100%;
+  height: 400px; 
+  overflow: hidden;
+}
+
+.image-container-single.centered-image-placeholder {
+  display: flex;
+  align-items: center;
+}
+
+.image-container-single img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* How to Make Section */
+.how-to-header {
+  font-size: 2rem;
+  color: #000000;
+  margin-top: 2rem;
+}
+
+.how-to-wrapper p.margin-top-med {
+  margin-top: 2rem;
+  color: #000;
+  font-weight: 300;
+}
+
+.how-to-wrapper p {
+  margin: 1rem 0;
+  color: #000;
+  font-weight: 300;
+}
+
+
+
+
+/* Important Notes Section */
+.how-to-wrapper h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 2rem;
+}
+
+.how-to-wrapper h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Comments Section */
+.comments-wrapper {
+  padding: 0rem 5%;
+  margin-top: 2rem; 
+  margin-bottom: 2rem;
+}
+
+.comments-section {
+  margin-bottom: 3rem;
+}
+
+.comments-section textarea::placeholder {
+  color: #888;    
+  font-size: 14px;  
+  opacity: 1;  
+  padding: 1rem 2%;
+}
+
+textarea {
+  width: 70%; 
+  height: 100px; 
+  margin-bottom: 0.30rem; 
+}
+
+.sample-comments {
+  margin-bottom: 2rem;
+}
+
+.comment {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sample-comments span {
+  color: #000000;
+  font-weight: 300;
+}
+
+.comment-prof-pic {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  margin-right: 2rem; 
+  margin-left: 2rem;
+}
+
+.comment-prof-pic img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center;
+}
+
+.comment-button.load-more-comments {
+  margin: 0 auto; 
+  display: block;
+  width: 200px;
+}
+
+.comment-button {
+  display: block;
+  padding: 0.5rem 0.15rem;
+  font-size: 0.80rem;
+  background-color: #973131;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  transition: background-color 0.3s;
+}
+
+.comment-button:hover {
+  background-color: #a83838; 
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+  float: right;
+  width: 20%;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  color: #973131;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Note at the Bottom */
+.note {
+  font-style: italic;
+  color: #000000;
+  margin-top: 10px;
+}
+
+/* Clearfix for Sidebar */
+body::after {
+  content: '';
+  display: table;
+  clear: both;
 }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Recipe</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/media-queries.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ephesis&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/main-logo.png" alt="Prothin Logo">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Start Here</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content-wrapper-single">
+    <nav class="breadcrumb margin-top">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li>Grilled</li>
+      </ul>
+    </nav>
+
+    <h1 class="blog-title">Grilled Chicken with Herbs</h1>
+
+    <div class="rating">
+      <span>★★★★☆</span> <span>5 reviews / 4.5 average</span>
+    </div>
+
+    <p class="blog-description italic">A delicious grilled chicken recipe infused with aromatic herbs.</p>
+
+    <div class="jump-to-howto">
+      <div class="arrow-down"></div>
+      <p>Jump to How To (with pictures)</p>
+    </div>
+  </div>
+
+  <!-- Sidebar for Ingredients, Equipment, etc. -->
+  <aside class="sidebar">
+    <h3>Ingredients</h3>
+    <ul>
+      <li>1 whole chicken</li>
+      <li>2 tbsp olive oil</li>
+      <li>Herbs of choice</li>
+      <!-- Add more ingredients as needed -->
+    </ul>
+
+    <h3>Equipment Needed</h3>
+    <ul>
+      <li>Grill</li>
+      <li>Meat thermometer</li>
+      <!-- Add more equipment as needed -->
+    </ul>
+
+    <h3>Instructions</h3>
+    <p>Follow the steps above for preparation.</p>
+
+    <h3>Nutritional Value</h3>
+    <p>Calories: 300, Protein: 30g, Fat: 15g</p>
+
+    <p class="note">Note: Nutritional values are approximate and may vary based on specific ingredients and portion
+      sizes.</p>
+  </aside>
+
+
+  <div class="how-to-wrapper">
+    <!-- Blog Image -->
+    <div class="image-container-single centered-image-placeholder">
+      <img src="./assets/images/recipe-blog-image-placeholder.jpg" alt="Grilled Chicken" class="blog-image">
+    </div>
+
+    <!-- Video Placeholder -->
+    <div class="video-placeholder-single">
+      <p>Watch here:</p>
+      <img src="./assets/images/video-placeholder-1.png" alt="Watch Here">
+    </div>
+
+    <!-- How to Make Section -->
+    <h2 class="how-to-header">How to Make (with Pictures)</h2>
+
+    <!-- Step 1 -->
+    <h3>Step 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.</p>
+    <div class="image-container-single">
+      <img src="./assets/images/instruction-1.jpg" alt="Step 1 Picture 1">
+    </div>
+    <p class="margin-top-med">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="image-container-single small-image-container">
+      <img src="./assets/images/instruction-2.jpg" alt="Step 1 Picture 2">
+    </div>
+
+    <!-- Step 2 -->
+    <h3>Step 2</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.</p>
+    <div class="image-container-single small-image-container">
+      <img src="./assets/images/instruction-3.jpg" alt="Step 2 Picture">
+    </div>
+
+    <!-- Step 3 -->
+    <h3>Step 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.</p>
+    <div class="image-container-single">
+      <img src="./assets/images/instruction-4.jpg" alt="Step 3 Picture">
+    </div>
+
+    <!-- Important Notes Section -->
+    <h4>Important Notes</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius. Lorem
+      ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius. Lorem ipsum
+      dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius. Lorem ipsum dolor sit
+      amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.</p>
+  </div>
+
+
+
+  <div class="comments-wrapper">
+    <div class="comments-section">
+      <h4>Put Your Comment</h4>
+      <textarea placeholder="Leave your comment..."></textarea>
+      <button class="comment-button">Submit Comment</button>
+    </div>
+
+    <div class="sample-comments">
+      <h4>Sample Comments</h4>
+      <div class="comment">
+        <div class="comment-prof-pic"><img src="./assets/images/comment-placeholder-1.jpg" alt="User1"
+            class="commenter-pic"></div>
+        <span>Great recipe! - User1</span>
+      </div>
+      <div class="comment">
+        <div class="comment-prof-pic"><img src="./assets/images/comment-placeholder-2.jpg" alt="User2"
+            class="commenter-pic"></div>
+        <span>Loved it! - User2</span>
+      </div>
+    </div>
+
+    <button type="button" class="comment-button load-more-comments">Load More Comments</button>
+  </div>
+
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <!-- First Column: Logo -->
+      <div class="footer-logo">
+        <img src="./assets/images/red-logo.png" alt="Prothin Logo">
+      </div>
+
+      <!-- Second Column: Links Group -->
+      <div class="footer-links">
+        <div class="footer-recipes">
+          <h4>Recipes</h4>
+          <a href="#">All Recipes</a>
+        </div>
+
+        <div class="footer-about">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Details</h4>
+          <p>1901 Thornridge Cir.</p>
+          <p>Shiloh, Hawaii 81063</p>
+          <p>+1 891 989-11-91</p>
+          <p>hello@logoipsum.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-copyright">
+      <p>© 2023 — Copyright</p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+<script src="./script.js"></script>
+</body>
+
+</html>
