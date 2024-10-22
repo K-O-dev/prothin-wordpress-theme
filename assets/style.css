@@ -4,10 +4,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Karla', sans-serif;
   line-height: 1.6;
   font-weight: 200;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 /* Navigation Styles */
@@ -20,31 +29,56 @@ body {
   color: #fff;
   font-weight: 300;
 }
+
 .logo img {
   height: 50px;
 }
+
 .nav-menu {
   display: flex;
   list-style: none;
 }
+
 .nav-menu li {
   margin-left: 2rem;
 }
+
 .nav-menu li a {
   color: #F9D689;
   text-decoration: none;
   font-size: 1.1rem;
+  transition: color 0.3s; 
+}
+
+.nav-menu li a:hover {
+  color: #fff;
+}
+
+/* Styles for Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #F9D689;
+  margin: 4px 0;
 }
 
 /* Slogan Section */
 .slogan {
   text-align: center;
-  padding: 2rem 5%;
+  padding: 1rem 5%;
 }
+
 .slogan h1 {
   font-size: 2.5rem;
   font-weight: 400;
 }
+
 .slogan .primary {
   font-family: 'Ephesis', cursive;
   font-size: 2.5rem;
@@ -53,25 +87,29 @@ body {
 
 /* Protein Categories (Card Style) */
 .protein-categories {
-  padding: 2rem 5%;
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-around;
   background-color: #F8F8F8;
 }
+
 .card-container {
   display: flex;
   gap: 1rem;
 }
+
 .category-card {
-  background-color: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
   overflow: visible;
 }
+
+.image-container {
+  position: relative;
+}
+
 
 .image-container {
   width: 307px;
@@ -98,6 +136,32 @@ body {
   object-position: top left; 
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(249, 214, 137, 0.25); 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.category-card:hover .overlay {
+  opacity: 1; 
+}
+
+.category-title {
+  background-color: #F9D689;
+  color: #000000;
+  padding: 0.5rem 2.5rem;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 35px);
+  z-index: 10;
+}
+
 .category-card .category-title {
   background-color: #F9D689;
   color: #000000;
@@ -106,9 +170,7 @@ body {
   bottom: 10px;
   left: 50%;
   transform: translate(-50%, 35px);
-  
   font-size: 1.25rem;
-  font-weight: 300;
   z-index: 10;
 }
 
@@ -137,15 +199,23 @@ body {
   justify-content: space-around;
   gap: 10rem;
 }
+
 .category-circle {
   text-align: center;
 }
+
 .category-circle img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  transition: transform 0.3s; 
 }
+
+.category-circle img:hover {
+  transform: scale(1.1); 
+}
+
 .category-circle p {
   margin-top: 0.5rem;
   font-weight: bold;
@@ -154,49 +224,53 @@ body {
 /* Search Section */
 .search-section {
   text-align: center;
-  padding: 2rem 5%;
+  padding: 1rem 5%;
 }
 
 .input-container {
-  position: relative; /* Positioning context for the icon */
-  display: inline-block; /* Allows the input and icon to stay together */
+  position: relative; 
+  display: inline-block; 
 }
 
 .search-section input {
-  padding: 0.5rem 1rem;
-  padding-left: 2.5rem; /* Add space for the icon */
+  padding-left: 2.5rem; 
   padding-right: 2.5rem;
   font-size: 1rem;
   width: 350px;
   height: 40px;
-  border: 1px solid #ccc; /* Optional: for consistent width */
-  border-radius: 0; /* Optional: remove any border radius */
+  border: 0.5px solid #ccc; 
+  border-radius: 0; 
   box-shadow: 
-    inset 0 3px 0 #ccc,  /* Top shadow */
-    inset -1px 0 0 #ccc, /* Left shadow */
-    inset 1px 0 0 #ccc;  /* Right shadow */
+    inset 0 3px 0 #ccc,  
+    inset -1px 0 0 #ccc, 
+    inset 1px 0 0 #ccc;  
+  transition: border-color 0.3s; 
+}
+
+.search-section input:focus {
+  border-color: #973131; 
 }
 
 .search-icon {
-  position: absolute; /* Position the icon inside the input */
-  top: 50%; /* Center vertically */
-  left: 10px; /* Space from the left */
-  transform: translateY(-50%); /* Adjust for exact centering */
-  color: #aaa; /* Icon color */
+  position: absolute; 
+  top: 50%; 
+  left: 10px; 
+  transform: translateY(-50%); 
+  color: #aaa; 
 }
 
 .clear-icon {
-  position: absolute; /* Position the X icon inside the input */
-  top: 50%; /* Center vertically */
-  right: 10px; /* Space from the right */
-  transform: translateY(-50%); /* Adjust for exact centering */
-  color: #aaa; /* Icon color */
-  cursor: pointer; /* Show a pointer cursor */
-  display: none; /* Initially hide the clear icon */
+  position: absolute; 
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-50%); 
+  color: #aaa; 
+  cursor: pointer; 
+  display: none; 
 }
 
 .clear-icon:hover {
-  color: #f00; /* Change color on hover (optional) */
+  color: rgb(134, 3, 3); 
 }
 
 .search-section span {
@@ -217,5 +291,289 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s; 
 }
 
+.search-section button:hover {
+  background-color: #a83838;; 
+}
+
+/* Blog Section */
+.blog-section {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.blog-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Latest Recipes and Diet Tips Columns */
+.latest-recipes, .diet-tips {
+  flex: 1;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+/* Headings */
+.latest-recipes h2, .diet-tips h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding-top: 20px;
+}
+
+/* Blog Item Structure */
+.blog-item {
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.blog-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.blog-content p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #000000;
+  max-width: 380px;
+}
+
+.blog-content a {
+  font-size: 1rem;
+  color: #973131;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s; 
+}
+
+.blog-content a:hover {
+  color: #a83838; 
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;               
+  background-color: #dcdcd8;
+  height: 1px;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  position: relative;
+  width: 240px; 
+  height: 240px; 
+  overflow: hidden;
+  margin-right: 14px;
+}
+
+.image-container #recipe-1 {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-70%, -50%); 
+  width: auto; 
+  height: 100%; 
+}
+
+.image-container #diet-tip-1 {
+  position: absolute;
+  bottom: 0; 
+  left: 50%;
+  transform: translate(-50%, 0); 
+  height: auto; 
+  width: auto; 
+  max-width: 100%; 
+  max-height: none; 
+}
+
+.blog-section button,
+#blog-recipes-button {
+  margin-top: 2rem;
+}
+
+.diet-tips {
+  background-color: #F5E7B2;
+}
+
+.latest-recipes {
+  background-color: #f4f4f4;
+}
+
+#blog-recipes-button {
+  display: block;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #F9D689;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+#blog-recipes-button:hover {
+  background-color: #f4c96d; /* Change background on hover */
+}
+
+.diet-tips button {
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #973131;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px; 
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.diet-tips button:hover {
+  background-color: #a83838; 
+}
+
+/* Ebook Section Structure */
+.ebook-section {
+  padding: 1rem 0%;
+  background-color: #393939; 
+}
+
+.ebook-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ebook-image img {
+  max-width: 100%; 
+  height: auto;
+  transition: transform 0.3s; 
+}
+
+.ebook-image img:hover {
+  transform: scale(1.05); 
+}
+
+.ebook-details {
+  margin-left: 20px; 
+  margin-right: 20px;
+  text-align: center; 
+  max-width: 60%;
+  color: #f4f4f4;
+}
+
+.dont-miss {
+  font-size: 3rem; 
+  margin-bottom: 10px;
+  font-family: 'Ephesis', cursive;
+  font-weight: 100;
+  color: #F9D689;
+}
+
+.book-title {
+  font-size: 3rem; 
+  margin-bottom: 10px;
+}
+
+.book-description {
+  margin-bottom: 20px; 
+}
+
+.ebook-form {
+  display: flex;
+  justify-content: center; 
+}
+
+.ebook-form input {
+  padding: 10px;
+  margin-right: 10px; 
+  border: 1px solid #ccc; 
+}
+
+.ebook-form button {
+  padding: 10px 15px;
+  background-color: #973131;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+.ebook-form button:hover {
+  background-color: #a83838; 
+}
+
+.footer-section {
+  background-color: #ffffff; 
+  color: rgb(0, 0, 0);
+  padding: 1rem 5%; 
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  max-width: 100%; 
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+}
+
+.footer-links div {
+  margin-right: 40px; 
+}
+
+.footer-container h4 {
+  margin-bottom: 5px; 
+}
+
+.footer-recipes a,
+.footer-about a {
+  color: #353535; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.footer-recipes a:hover,
+.footer-about a:hover {
+  text-decoration: underline;
+  color: #973131; 
+}
+
+.footer-copyright {
+  text-align: left; 
+  padding-top: 10px; 
+  font-size: 0.9rem; 
+  color: #353535; 
+}

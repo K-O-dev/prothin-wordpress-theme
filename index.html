@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prothin | Home</title>
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/media-queries.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -23,7 +24,12 @@
       <div class="logo">
         <img src="assets/images/main-logo.png" alt="Prothin Logo">
       </div>
-      <ul class="nav-menu">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Recipes</a></li>
@@ -41,25 +47,33 @@
   <section class="protein-categories">
     <div class="card-container">
       <div class="category-card grilled">
-        <div class="image-container"><img src="./assets/images/hero-section-image-1.jpg" alt="" class="zoom-image">
+        <div class="image-container">
+          <img src="./assets/images/hero-section-image-1.jpg" alt="" class="zoom-image">
+          <div class="overlay"></div>
         </div>
-        <div class="category-title">Grilled</div>
+        <div class="category-title bold-font">Grilled</div>
       </div>
 
       <div class="category-card soup">
-        <div class="image-container"><img src="./assets/images/hero-section-image-2.jpg" alt="" class="zoom-image">
+        <div class="image-container">
+          <img src="./assets/images/hero-section-image-2.jpg" alt="" class="zoom-image">
+          <div class="overlay"></div>
         </div>
-        <div class="category-title">Soup</div>
+        <div class="category-title bold-font">Soup</div>
+      </div>
+      <div class="category-card soup bold-font">
+        <div class="image-container">
+          <img src="./assets/images/hero-section-image-3.jpg" alt="" class="zoom-image">
+          <div class="overlay"></div>
+        </div>
+        <div class="category-title bold-font">Fried</div>
       </div>
       <div class="category-card soup">
-        <div class="image-container"><img src="./assets/images/hero-section-image-3.jpg" alt="" class="zoom-image">
+        <div class="image-container">
+          <img src="./assets/images/hero-section-image-4.jpg" alt="" class="zoom-image">
+          <div class="overlay"></div>
         </div>
-        <div class="category-title">Fried</div>
-      </div>
-      <div class="category-card soup">
-        <div class="image-container"><img src="./assets/images/hero-section-image-4.jpg" alt="" class="zoom-image">
-        </div>
-        <div class="category-title">Baked</div>
+        <div class="category-title bold-font">Baked</div>
       </div>
     </div>
   </section>
@@ -93,13 +107,160 @@
   <!-- Search Bar -->
   <section class="search-section">
     <div class="input-container">
-      <i class="fa-solid fa-magnifying-glass search-icon"></i> <!-- Font Awesome magnifying glass -->
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
       <input type="text" placeholder="Search for recipes">
       <i class="fa-solid fa-xmark clear-icon"></i>
     </div>
     <span class="bold-font medium-size-font">or</span>
     <button>View All Recipes</button>
   </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="container">
+      <!-- Left Column: Latest Recipes -->
+      <div class="latest-recipes">
+        <h2>Latest Recipes</h2>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/recipe-blog-image-placeholder.jpg" alt="Recipe Image"
+              id="recipe-1"></div>
+          <div class="blog-content">
+            <h3>Recipe Title 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/recipe-blog-image-placeholder-2.jpg"
+              alt="Recipe Image"></div>
+          <div class="blog-content">
+            <h3>Recipe Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/recipe-blog-image-placeholder-3.jpg"
+              alt="Recipe Image"></div>
+          <div class="blog-content">
+            <h3>Recipe Title 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <button id="blog-recipes-button">All Recent Recipes</button>
+      </div>
+
+      <!-- Right Column: Diet Tips and More -->
+      <div class="diet-tips">
+        <h2>Diet Tips and More</h2>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/tips-blog-image-placeholder.jpg" alt="Diet Tip Image"
+              id="diet-tip-1"></div>
+          <div class="blog-content">
+            <h3>Diet Tip 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/tips-blog-image-placeholder-2.jpg"
+              alt="Diet Tip Image"></div>
+          <div class="blog-content">
+            <h3>Diet Tip 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/tips-blog-image-placeholder-3.jpg"
+              alt="Diet Tip Image"></div>
+          <div class="blog-content">
+            <h3>Diet Tip 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <button class="tips-section">All Recent Tips</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free eBook Section -->
+  <section class="ebook-section">
+    <div class="ebook-container">
+      <!-- Left Side: Book Image -->
+      <div class="ebook-image">
+        <img src="./assets/images/ebook-front-cover.png" alt="Top 25 Recipes Cookbook">
+      </div>
+
+      <!-- Right Side: eBook Details -->
+      <div class="ebook-details">
+        <h2 class="dont-miss">Don't Miss This</h2>
+        <h3 class="book-title">Top 25 Recipes Cookbook</h3>
+        <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac
+          dui lobortis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui
+          lobortis varius.</p>
+
+        <!-- Input Form -->
+        <div class="ebook-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit">Go</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <!-- First Column: Logo -->
+      <div class="footer-logo">
+        <img src="./assets/images/red-logo.png" alt="Prothin Logo">
+      </div>
+
+      <!-- Second Column: Links Group -->
+      <div class="footer-links">
+        <div class="footer-recipes">
+          <h4>Recipes</h4>
+          <a href="#">All Recipes</a>
+        </div>
+
+        <div class="footer-about">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Details</h4>
+          <p>1901 Thornridge Cir.</p>
+          <p>Shiloh, Hawaii 81063</p>
+          <p>+1 891 989-11-91</p>
+          <p>hello@logoipsum.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-copyright">
+      <p>© 2023 — Copyright</p>
+    </div>
+  </footer>
+
+
+
+
 
 
   <script src="./script.js"></script>
