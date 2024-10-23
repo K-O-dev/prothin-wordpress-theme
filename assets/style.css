@@ -803,6 +803,7 @@ hr {
   padding: 0rem 5%;
 }
 
+
 .blog-title {
   font-size: 2.5rem;
   color: #973131;
@@ -810,10 +811,14 @@ hr {
 }
 
 /* Rating Styles */
-.rating {
+.rating span {
   font-size: 1.2rem;
-  color: #727272;
+  color: #000;
   margin-bottom: 1rem;
+  
+}
+#star {
+  color: #F9D689;
 }
 
 .blog-description {
@@ -831,6 +836,12 @@ hr {
   position: relative;
   margin: 1.5rem 0;
   margin-bottom: 0;
+  max-width: 1000px;
+  transition: background-color 0.3s ease;
+}
+
+.jump-to-howto:hover {
+  background-color: #e0e0e0;
 }
 
 .jump-to-howto .arrow-down {
@@ -842,7 +853,6 @@ hr {
   position: absolute;
   top: -10px;
   left: 50%;
-  transform: translateX(-50%);
 }
 
 .jump-to-howto p {
@@ -862,6 +872,7 @@ hr {
 .video-placeholder-single img {
   width: 100%;
   height: auto;
+  max-width: 1000%;
 }
 
 .video-placeholder-single p {
@@ -873,6 +884,7 @@ hr {
   width: 100%;
   height: 500px; 
   overflow: hidden;
+  max-width: 1000px;
 }
 
 .image-container-single.small-image-container {
@@ -889,6 +901,12 @@ hr {
 .image-container-single img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.image-container-single:hover img { 
+  filter: brightness(1.1); 
 }
 
 
@@ -909,6 +927,7 @@ hr {
   margin: 1rem 0;
   color: #000;
   font-weight: 300;
+  max-width: 1000px;
 }
 
 
@@ -929,9 +948,11 @@ hr {
 
 /* Comments Section */
 .comments-wrapper {
-  padding: 0rem 5%;
+  padding: 1rem 5%;
   margin-top: 2rem; 
   margin-bottom: 2rem;
+  background-color: #f6f3f3;
+  width: 100%;
 }
 
 .comments-section {
@@ -949,6 +970,7 @@ textarea {
   width: 70%; 
   height: 100px; 
   margin-bottom: 0.30rem; 
+  max-width: 1000px;
 }
 
 .sample-comments {
@@ -1014,31 +1036,61 @@ textarea {
 /* Sidebar Styles */
 .sidebar {
   float: right;
-  width: 20%;
+  width: 25%;
   margin-top: 20px;
-  padding-left: 20px;
+  padding: 20px;
+  background-color: #F5E7B2; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-right: 10%;
 }
 
+.sub-container {
+  background-color: #ffffff; 
+  padding: 15px;
+  margin-bottom: 20px; 
+  border: 1px solid #eee; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+/* Style for the headings in the sidebar */
 .sidebar h3 {
   font-size: 1.5rem;
   color: #973131;
   margin-bottom: 0.5rem;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+/* Style for the unordered lists */
+.sidebar ul, .sub-container p {
+  padding-left: 15px;
+  color: #000000;
+  font-weight: 300;
 }
 
+/* Style for the list items */
 .sidebar ul li {
   margin-bottom: 0.5rem;
+  
 }
 
-/* Note at the Bottom */
+.sub-container.min-padding-left {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#instructions-sidebar {
+  padding-left: 10px;
+}
+
+/* Style for the note at the end */
 .note {
   font-style: italic;
   color: #000000;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* Clearfix for Sidebar */
@@ -1047,3 +1099,4 @@ body::after {
   display: table;
   clear: both;
 }
+
