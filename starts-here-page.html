@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Recipe</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/media-queries.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ephesis&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/main-logo.png" alt="Prothin Logo">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Start Here</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <div class="about-section clearfix">
+
+
+    <div class="about-image-container">
+      <img src="./assets/images/starts-here-placeholder.jpg" alt="About Me" class="about-image">
+    </div>
+    <div class="about-text-container">
+      <nav class="breadcrumb margin-top padding-left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Starts Here</a></li>
+          <li>Grilled</li>
+        </ul>
+      </nav>
+      <h2>Welcome to ProThin</h2>
+      <p>Why we focus on <span class="highlight-name">Protein</span></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius. Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius. Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.</p>
+    </div>
+  </div>
+
+  <div class="signup-section">
+    <div class="signup-container">
+      <!-- Left side with Follow Us and logos -->
+      <div class="follow-us">
+        <p>Follow Us:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
+          <a href="#"><i class="fab fa-spotify fa-2x"></i></a>
+        </div>
+      </div>
+
+      <!-- Right side with Sign Up form -->
+      <div class="signup-form">
+        <h2><span class="highlight-signup">Sign up</span> for email updates</h2>
+        <div class="input-group">
+          <input type="text" placeholder="First Name" class="first-name">
+          <input type="email" placeholder="Email Address" class="email-input">
+          <button type="submit" class="signup-button">Go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <section class="search-section">
+    <div class="input-container">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" placeholder="Search for recipes">
+      <i class="fa-solid fa-xmark clear-icon"></i>
+    </div>
+    <span class="bold-font medium-size-font">or</span>
+    <button>View All Recipes</button>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="container">
+      <!-- Left Column: Latest Recipes -->
+      <div class="latest-recipes">
+        <h2>Latest Recipes</h2>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/recipe-blog-image-placeholder.jpg" alt="Recipe Image"
+              id="recipe-1"></div>
+          <div class="blog-content">
+            <h3>Recipe Title 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/recipe-blog-image-placeholder-2.jpg"
+              alt="Recipe Image"></div>
+          <div class="blog-content">
+            <h3>Recipe Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/recipe-blog-image-placeholder-3.jpg"
+              alt="Recipe Image"></div>
+          <div class="blog-content">
+            <h3>Recipe Title 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <button id="blog-recipes-button">All Recent Recipes</button>
+      </div>
+
+      <!-- Right Column: Diet Tips and More -->
+      <div class="diet-tips">
+        <h2>Diet Tips and More</h2>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/tips-blog-image-placeholder.jpg" alt="Diet Tip Image"
+              id="diet-tip-1"></div>
+          <div class="blog-content">
+            <h3>Diet Tip 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/tips-blog-image-placeholder-2.jpg"
+              alt="Diet Tip Image"></div>
+          <div class="blog-content">
+            <h3>Diet Tip 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <hr>
+        <div class="blog-item">
+          <div class="image-container"><img src="./assets/images/tips-blog-image-placeholder-3.jpg"
+              alt="Diet Tip Image"></div>
+          <div class="blog-content">
+            <h3>Diet Tip 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula augue ac dui lobortis varius.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <button class="tips-section">All Recent Tips</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <!-- First Column: Logo -->
+      <div class="footer-logo">
+        <img src="./assets/images/red-logo.png" alt="Prothin Logo">
+      </div>
+
+      <!-- Second Column: Links Group -->
+      <div class="footer-links">
+        <div class="footer-recipes">
+          <h4>Recipes</h4>
+          <a href="#">All Recipes</a>
+        </div>
+
+        <div class="footer-about">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Details</h4>
+          <p>1901 Thornridge Cir.</p>
+          <p>Shiloh, Hawaii 81063</p>
+          <p>+1 891 989-11-91</p>
+          <p>hello@logoipsum.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-copyright">
+      <p>© 2023 — Copyright</p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+<script src="./script.js"></script>
+</body>
+
+</html>

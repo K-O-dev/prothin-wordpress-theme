@@ -1120,9 +1120,27 @@ body::after {
   overflow: hidden; 
 }
 
+.about-image-container.taller-image-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem; 
+  width: 100%; 
+  max-width: 566px; 
+  height: auto; 
+  max-height: 800px; 
+  overflow: hidden; 
+  
+}
+
 .about-image {
   width: 100%; 
   height: auto; 
+  object-fit: cover; 
+}
+
+.about-image.taller-image {
+  width: 100%; 
+  height: 100%; 
   object-fit: cover; 
 }
 
