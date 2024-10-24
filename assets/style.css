@@ -1100,3 +1100,197 @@ body::after {
   clear: both;
 }
 
+/* About Me */
+
+.about-section {
+  display: flex; 
+  justify-content: center; /* Horizontally centers items */
+  padding: 4rem 5%;
+  padding-bottom: 0;
+  background-color: #f0eeee; 
+}
+
+
+.about-image-container {
+  margin-right: 1.5rem; 
+  width: 100%; 
+  max-width: 566px; 
+  height: auto; 
+  max-height: 600px; 
+  overflow: hidden; 
+}
+
+.about-image {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+
+.about-text-container {
+  max-width: 50%;
+}
+
+.about-text-container h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #973131; 
+  margin-bottom: 0.5rem; 
+}
+
+.about-text-container p {
+  margin-bottom: 1rem;
+  color: #6d6d6d;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.highlight-name {
+  font-family: 'Ephesis', sans-serif; 
+  font-size: 2.5rem; 
+  color: #973131; 
+  font-weight: 100;
+}
+
+.about-text-container p:first-of-type {
+  font-weight: bold; 
+  color: #000000; 
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.about-section-details {
+  max-width: 80%;
+  margin: 0 auto; 
+  padding: 1rem;
+}
+
+.about-section-details h2 {
+  font-size: 3rem; 
+  color: #973131; 
+  margin-bottom: 1rem; 
+}
+
+.about-section-details p {
+  margin-bottom: 1rem; 
+  color: #000000; 
+  font-size: 1.2rem;
+  max-width: 1000px; 
+}
+
+.about-section-details .image-container {
+  width: 1000px; 
+  height: auto; 
+  overflow: hidden;
+  margin: 1rem 0; 
+}
+
+.about-section-details .about-image {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover;
+}
+
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 5%;
+  background-color: #973131;
+  color: white;
+  height: 200px; 
+}
+
+.signup-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.follow-us {
+  display: flex;
+  align-items: center;
+}
+
+.follow-us p {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  font-weight: 400;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.signup-form h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.highlight-signup {
+  font-family: 'Ephesis', sans-serif;
+  font-size: 2.25rem;
+  color: #F9D689;
+  margin-right: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.first-name,
+.email-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 40px;
+}
+
+.signup-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+}
+
+.signup-button:hover {
+  background-color: #212121;
+}
+
+.social-icons a {
+  color: #ffffff; /* Makes the icon black */
+  margin-right: 0.25rem;
+}
+
+.social-icons a:hover {
+  color: #ffffff; /* Optional: Adds a hover effect to change the color */
+}
+
+.fa-lg {
+  font-size: 30px; /* Adjust size if needed */
+}

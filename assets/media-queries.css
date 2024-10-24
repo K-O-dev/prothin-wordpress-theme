@@ -343,12 +343,12 @@
   body > div > div.how-to-wrapper > div:nth-child(11),
   body > div > div.how-to-wrapper > div:nth-child(8)
     {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
 
   .image-container-single img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -384,14 +384,14 @@
   }
 
   .image-container-single img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 .jump-to-howto {
   padding: 1rem;
   margin: 1rem 0;
-  width: 90%;
+  width: 100%;
 }
 }
 
@@ -427,8 +427,7 @@
   /* Sidebar Section */
   .sidebar {
     grid-area: sidebar;
-    width: 80%;
-    margin-left: 3rem;
+
   }
 
   /* Comments Section */
@@ -459,10 +458,10 @@
 
   .sidebar {
     width: 80%; 
-    padding: 10px; 
     margin-right: 0; 
     margin-top: 15px; 
     font-size: 0.9rem; 
+    margin-left: 1.2rem;
   }
 
   .sub-container {
@@ -529,7 +528,6 @@
 
   .sidebar {
     width: 100%; 
-    padding: 10px; 
     margin-right: 0; 
     margin-top: 15px; 
     font-size: 0.9rem; 
@@ -559,5 +557,151 @@
 
   .blog-title {
     line-height: 1;
+  }
+}
+
+/* About Me */
+
+@media (max-width: 1094px) {
+  
+  .about-section {
+    padding: 1rem 5%;
+  }
+
+  .about-section {
+    flex-direction: column; 
+    align-items: center; 
+    padding-bottom: 30px;
+  }
+
+  .about-text-container {
+    order: 1; 
+  }
+
+  .about-image-container {
+    order: 2; 
+    margin-top: 1rem; 
+  }
+
+  .about-image-container, 
+  .about-text-container {
+    width: 100%; 
+    margin: 0;
+    max-width: none; 
+  }
+
+  .about-text-container h2 {
+    font-size: 2rem; 
+  }
+
+  .about-text-container p {
+    font-size: 1.1rem; 
+  }
+
+  /* About Section Details */
+  .about-section-details {
+    max-width: 100%; 
+    padding: 10px 5%;
+  }
+
+  .about-section-details h2 {
+    font-size: 2rem; 
+  }
+
+  .about-section-details p {
+    font-size: 1.1rem; 
+  }
+
+  .about-section-details .image-container {
+    width: 100%; 
+  }
+
+  /* Signup Section */
+  .signup-section {
+    flex-direction: column; 
+    padding: 1rem 5%; 
+    height: auto; 
+  }
+
+  .signup-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .follow-us {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 1rem; 
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem; 
+  }
+  
+  .social-icons a {
+    color: #ffffff; 
+    font-size: 15px; 
+  }
+
+  .follow-us, 
+  .signup-form {
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .social-icons a {
+    margin-right: 0.5rem;
+  }
+
+  .signup-form .input-group {
+    flex-direction: column; 
+    gap: 0.5rem; 
+  }
+
+  .first-name, 
+  .email-input, 
+  .signup-button {
+    max-width: 100%; 
+  }
+}
+
+/* Media query for very small screens like phones */
+@media (max-width: 480px) {
+  .about-text-container {
+    order: 1; 
+  }
+
+  .about-image-container {
+    order: 2; 
+    margin-top: 1rem;
+  }
+  .about-text-container h2 {
+    font-size: 1.5rem; 
+  }
+
+  .about-text-container p {
+    font-size: 1rem;
+  }
+
+  .signup-form h2 {
+    font-size: 1.1rem; 
+  }
+
+  .highlight-signup {
+    font-size: 1.5rem; 
+  }
+
+  .first-name,
+  .email-input,
+  .signup-button {
+    font-size: 0.9rem; 
+  }
+
+  .about-section {
+    padding: 1rem 5%;
   }
 }
